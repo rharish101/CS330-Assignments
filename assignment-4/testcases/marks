@@ -1,0 +1,8 @@
+Basic test
+tc1_sanity.sh: marks = 6
+tc2_scalability.sh: marks = 6
+tc3_concurrency.sh: marks = 4
+tc4_cache.sh: marks = 0
+total marks 16
+Scaled marks
+8.00000000000000000000

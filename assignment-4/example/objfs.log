@@ -1,0 +1,7 @@
+objfs_init
+Done objstore init
+objfs_getattr: key=/.Trash
+objfs_getattr: key=/.Trash-1000
+objfs_getattr: key=/
+objfs_destroy
+Done objstore destroy

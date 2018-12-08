@@ -1,0 +1,43 @@
+Test cases
+
+test_basic.sh - 0 marks
+	Tests the put_key (create file) and get_key (read file) functionalities of the FS.
+	The return value should be proper.
+	This is a necessary test case failing which other test cases will not be run.
+
+tc1_sanity.sh - 3 marks
+	Checks all the basic functionalities for about 100 files in serialized manner.
+	1 mark for passing all file creations
+	1 mark for passing all file reads
+	0.5 marks for deleting files
+	0.5 marks for renaming files
+
+tc2_scalability.sh - 3 marks
+	Checks maximum size files (16 MB) and high number of files (10^4 instead of 10^6) separately.
+	1.5 marks for each
+
+tc3_concurrency.sh - 2 marks
+	Runs 16 different threads parallely and invokes various functionalities in each thread
+
+tc4_cache.sh - 2 marks
+	On the cache based FS, creates lots of files and checks the following in order.
+	Failing any step will terminate the test and no marks will be provided.
+		1. Checks that the binaries 'objfs' and 'objfs_cached' are different.
+		2. Sanity test (read the files and compare with original).
+		3. Sanity test after remount.
+		4. Remount again and check time to read (t1).
+		5. Again check time to read (t2).
+	t2 should be much smaller than t1 and checked manually.
+	Same data is read in last two steps and the amount of data read is smaller than the cache size.
+
+
+Copy your code on latest codebase and run
+$ make && make objfs_cached
+
+Extract the attached file to latest codebase and execute following commands
+$ cd testcases
+$ make
+$ ./run_test_cases.sh
+
+You can check your marks in the 'marks' file generated inside 'testcases' folder after execution of above script.
+Be noted that the marks printed in this file is for 20 marks and you should divide it by 2 to get the final one.

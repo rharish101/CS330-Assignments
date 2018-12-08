@@ -1,0 +1,8 @@
+tc1_sanity.sh
+rm: cannot remove 'mnt': Device or resource busy
+fusermount: failed to access mountpoint /mnt/Data/Google Drive/Academics/CS330A/assignment-4/mnt: Permission denied
+tc2_scalability.sh
+tc3_concurrency.sh
+tc4_cache.sh
+Bad file ../mnt/tc4_file_1
+./tc4_cache.sh: Sanity test failed after first remount
